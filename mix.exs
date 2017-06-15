@@ -26,7 +26,7 @@ defmodule Exq.Mixfile do
   def application do
     [
       mod: { Exq, [] },
-      applications: [:logger, :redix, :uuid]
+      applications: [:logger, :redix, :elixir_uuid]
     ]
   end
 
@@ -34,7 +34,7 @@ defmodule Exq.Mixfile do
   # { :foobar, "0.1", git: "https://github.com/elixir-lang/foobar.git" }
   defp deps do
     [
-      { :uuid, ">= 1.0.0" },
+      { :elixir_uuid, github: "jfrolich/elixir-uuid" },
       { :redix, ">= 0.5.0"},
       { :poison, ">= 1.2.0 or ~> 2.0"},
       { :excoveralls, "~> 0.6", only: :test },
